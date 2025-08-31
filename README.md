@@ -1,2 +1,2 @@
-# My React App  
-A simple React.js project built with Create React App and hosted on GitHub. 
+# React Chatbot  
+An interactive chatbot built with React.js for engaging conversations.  
