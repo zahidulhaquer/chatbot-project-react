@@ -3,21 +3,21 @@ import { Chatbot } from 'supersimpledev'
 import './ChatInput.css'
 
 export function ChatInput({ chatMessages, setChatMessages }) {
-        const [inputText, setInputText] = useState('');
+    const [inputText, setInputText] = useState('');
 
-        function saveInputText(event) {
-          setInputText(event.target.value);
+    function saveInputText(event) {
+        setInputText(event.target.value);
+    }
+
+    function sendMessage() {
+        const newChatMessages = [
+        ...chatMessages,
+        {
+            message: inputText,
+            sender: 'user',
+            id: crypto.randomUUID()
         }
-
-        function sendMessage() {
-          const newChatMessages = [
-            ...chatMessages,
-            {
-              message: inputText,
-              sender: 'user',
-              id: crypto.randomUUID()
-            }
-          ];
+        ];
 
         setChatMessages(newChatMessages);
 
